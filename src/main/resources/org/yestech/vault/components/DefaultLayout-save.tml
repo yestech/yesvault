@@ -1,0 +1,128 @@
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!--<meta http-equiv="Content-Language" content="English" />-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link href="${asset:context:style/default.css}" rel="stylesheet" type="text/css" media="screen"/>
+        <title>${message:app.title} - ${currentPage}</title>
+    </head>
+    <body>
+        <div id="wrap">
+
+            <div id="top"></div>
+
+            <div id="content">
+
+                <div id="header">
+                    <h1>
+                        ${message:app.title}
+                    </h1>
+                    <h2>By
+                        <a href="http://yestech.org">YES Technology</a>
+                    </h2>
+                </div>
+
+                <div id="breadcrumbs">
+                    <a href="#">Home</a> &middot; You are here
+                </div>
+
+                <div id="navigation">
+                    <div id="navtop"></div>
+
+                    <div id="navbody">
+                        <h2>Categories :</h2>
+                        <ul>
+                            <li>
+                                <a href="#">Latest Designs</a>
+                            </li>
+                            <li>
+                                <a href="#">Free Css Templates</a>
+                            </li>
+                            <li>
+                                <a href="#">Wordpress Templates</a>
+                            </li>
+                            <li>
+                                <a href="#">Blogger Templates</a>
+                            </li>
+                        </ul>
+
+                        <h2>Archives :</h2>
+                        <ul>
+                            <li>
+                                <a href="#">January 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">February 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">March 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">April 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">May 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">June 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">July 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">August 2007</a>
+                            </li>
+                            <li>
+                                <a href="#">September 2007</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="navbottom"></div>
+                </div>
+                <div id="mainbody">
+                    <t:body/>
+
+                </div>
+
+                <div id="clear"></div>
+
+            </div>
+
+            <div id="bottom"></div>
+
+        </div>
+
+        <div id="footer">
+            <t:outputraw value="${message:app.copyright}"/>
+        </div>
+    </body>
+</html>

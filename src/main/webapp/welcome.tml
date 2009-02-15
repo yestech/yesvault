@@ -1,0 +1,19 @@
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+
+<html t:type="securelayout" t:currentPage="message:currentPage" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+
+    <h2>${message:header}</h2>
+    <p>${message:content}</p>
+</html>

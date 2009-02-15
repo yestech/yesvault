@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+    </body>
+</html>

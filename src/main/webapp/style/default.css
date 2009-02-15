@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    font: .74em "Trebuchet MS" Verdana, Arial, sans-serif;
+    line-height: 1.5em;
+}
+
+a {
+    color: #3B6EBF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#wrap {
+    margin: 20px auto;
+    width: 724px;
+    background: #fff url( '../images/midbg.jpg' );
+    background-repeat: repeat-y;
+}
+
+#top {
+    background: #fff url( '../images/topbg.jpg' );
+    height: 30px;
+}
+
+#content {
+    padding: 0 40px 0 40px;
+}
+
+#bottom {
+
+    background: #fff url( '../images/botbg.jpg' );
+    height: 30px;
+}
+
+#header {
+    height: 100px;
+    background: #85ACF7 url( '../images/hidr.jpg' );
+}
+
+#header h1 {
+    padding-left: 17px;
+    padding-top: 22px;
+    font-size: 22px;
+    color: #FFF;
+}
+
+#header h1 a {
+    font-size: 22px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#header h2 {
+    padding-left: 17px;
+    padding-top: 0px;
+    font-size: 17px;
+    color: #FFF;
+}
+
+#breadcrumbs {
+    background: #F6F9FB;
+    border-bottom: 1px solid #E1E1E1;
+    padding: 5px;
+}
+
+#mainbody {
+    float: left;
+    width: 59%;
+    margin: 0 10px;
+    padding: 1% 1%;
+    text-align: justify;
+}
+
+#mainbody h2 {
+    color: #3B6EBF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#clear {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+}
+
+#footer {
+    text-align: center;
+    color: #666;
+}
+
+#navigation {
+    float: left;
+    width: 220px;
+    text-align: justify;
+    padding-left: 5px;
+}
+
+#navtop {
+    background: #FFF6BB url( '../images/navtop.jpg' ) no-repeat;
+    height: 20px;
+}
+
+#navbody {
+    background: #FFF6BB url( '../images/navbody.jpg' ) repeat-y;
+}
+
+#navbody div#logindiv {
+    padding-left: 20px;
+}
+
+#navbody h2 {
+    color: #777;
+    font-weight: 600;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+#navbody ul {
+    letter-spacing: -1px;
+    color: #aaa;
+    padding-left: 40px;
+}
+
+#navbottom {
+    background: #FFF6BB url( '../images/navbottom.jpg' ) no-repeat;
+    height: 20px;
+}
+

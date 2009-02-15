@@ -1,0 +1,74 @@
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <div id="navigation">
+        <div id="navtop"></div>
+
+        <div id="navbody">
+            <t:if test="authenticated">
+                <h2>Categories :</h2>
+                <ul>
+                    <li>
+                        <a href="#">Latest Designs</a>
+                    </li>
+                    <li>
+                        <a href="#">Free Css Templates</a>
+                    </li>
+                    <li>
+                        <a href="#">Wordpress Templates</a>
+                    </li>
+                    <li>
+                        <a href="#">Blogger Templates</a>
+                    </li>
+                </ul>
+
+                <h2>Archives :</h2>
+                <ul>
+                    <li>
+                        <a href="#">January 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">February 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">March 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">April 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">May 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">June 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">July 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">August 2007</a>
+                    </li>
+                    <li>
+                        <a href="#">September 2007</a>
+                    </li>
+                </ul>
+                <t:parameter name="else">
+                    <t:login/>
+                </t:parameter>
+            </t:if>
+        </div>
+
+        <div id="navbottom"></div>
+    </div>
+</t:container>

@@ -1,0 +1,23 @@
+<!--
+  ~ YES Technology - http://yestech.org
+  ~
+  ~ Licensed using GPL Available - http://opensource.org/licenses/gpl-license.php
+  ~
+  ~ File name:           $RCSfile: $
+  ~ Revision:            $Revision: $
+  ~ Last revised by:     $Author: $
+  ~ Last revision date:  $Date: $
+  ~
+  ~ Original Author:     Arthur Copeland
+  ~
+  -->
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+
+    <div id="logindiv">
+        <form id="loginForm" action="">
+            ${message:username}: <input type="text" name="user" size="10"/>
+            <br/><br/>
+            ${message:password}: <input type="password" name="password" size="10"/>
+        </form>
+    </div>
+</t:container>
