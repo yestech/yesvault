@@ -12,13 +12,17 @@
   ~
   -->
 
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.yestech</groupId>
     <artifactId>yesvault</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>vault Tapestry 5 Application</name>
+    <name>YES Vault</name>
+    <properties>
+        <tapestry-release-version>5.0.18</tapestry-release-version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.tapestry</groupId>
@@ -77,7 +81,39 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             </plugin>
         </plugins>
     </build>
-
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <reporting>
 
         <!-- Adds a report detailing the components, mixins and base classes defined by this module. -->
@@ -112,6 +148,10 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <name>OpenQA Release Repository</name>
             <url>http://archiva.openqa.org/repository/releases/</url>
         </repository>
+        <repository>
+            <id>yestech.thirdparty</id>
+            <url>http://repo.yestech.org/content/repositories/thirdparty</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -126,7 +166,16 @@ of a Tapestry Maven plugin is not required.   -->
 
     </pluginRepositories>
 
-    <properties>
-        <tapestry-release-version>5.0.18</tapestry-release-version>
-    </properties>
+    <distributionManagement>
+        <repository>
+            <id>yestech.release</id>
+            <name>Yestech release repository</name>
+            <url>http://repo.yestech.org/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>yestech.snapshots</id>
+            <name>Yestech snapshots repository</name>
+            <url>http://repo.yestech.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
