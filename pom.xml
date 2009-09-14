@@ -7,6 +7,12 @@
     <packaging>war</packaging>
     <name>YES Vault</name>
     <url>http://yestech.org/sites/yesvault/</url>
+    <description></description>
+    <parent>
+        <groupId>org.yestech</groupId>
+        <artifactId>yessuperpom</artifactId>
+        <version>1.1.0</version>
+    </parent>
     <scm>
         <connection>scm:git:git://github.com/yestech/yesvault.git</connection>
         <developerConnection>scm:git:git://github.com/yestech/yesvault.git</developerConnection>
@@ -99,16 +105,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
     <build>
         <finalName>yesvault</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <optimize>true</optimize>
-                </configuration>
-            </plugin>
-
             <!-- Run the application using "mvn jetty:run" -->
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
@@ -126,53 +122,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.0-alpha-4</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+
     <reporting>
         <!-- Adds a report detailing the components, mixins and base classes defined by this module. -->
         <plugins>
@@ -184,21 +134,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
                     <rootPackage>org.yestech.vault</rootPackage>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.6</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.4.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.1.2</version>
-            </plugin>
+
         </plugins>
     </reporting>
 
@@ -221,17 +157,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <name>OpenQA Release Repository</name>
             <url>http://archiva.openqa.org/repository/releases/</url>
         </repository>
-        <repository>
-            <id>yestech-snapshots</id>
-            <name>YES Technology Snapshot Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
         </repositories>
 
     <pluginRepositories>
@@ -242,33 +167,6 @@ of a Tapestry Maven plugin is not required.   -->
             <id>tapestry-snapshots</id>
             <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
         </pluginRepository>
-        <pluginRepository>
-            <id>yestech-snapshots</id>
-            <name>YES Technology Snapshot Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 
-    <distributionManagement>
-        <site>
-            <id>yestech.org</id>
-            <url>file:////wwwhome/yestech.org/sites/${artifactId}</url>
-        </site>
-        <repository>
-            <id>yestech-releases</id>
-            <name>YES Technology Release Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>yestech-snapshots</id>
-            <name>YES Technology Snapshot Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/github-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    </pluginRepositories>
 </project>
