@@ -7,15 +7,15 @@
     <packaging>war</packaging>
     <name>YES Vault</name>
     <url>http://yestech.org/sites/yesvault/</url>
-    <description></description>
+    <description>A password keeper web app</description>
     <parent>
         <groupId>org.yestech</groupId>
         <artifactId>yessuperpom</artifactId>
-        <version>1.1.0</version>
+        <version>1.3.0</version>
     </parent>
     <scm>
-        <connection>scm:git:git://github.com/yestech/yesvault.git</connection>
-        <developerConnection>scm:git:git://github.com/yestech/yesvault.git</developerConnection>
+        <connection>scm:git:git@github.com:yestech/yesvault.git</connection>
+        <developerConnection>scm:git:git@github.com:yestech/yesvault.git</developerConnection>
         <url>http://github.com/yestech/yesvault/tree/master</url>
     </scm>
     <organization>
@@ -40,9 +40,13 @@
             </roles>
         </developer>
     </developers>
+    <ciManagement>
+        <url>http://ci.yestech.org</url>
+        <system>hudson</system>
+    </ciManagement>
     <properties>
         <tapestry-release-version>5.0.18</tapestry-release-version>
-        <slf4j.version>1.5.6</slf4j.version>
+        <slf4j.version>1.5.11</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
@@ -138,35 +142,35 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         </plugins>
     </reporting>
 
-    <repositories>
-        <!-- This can be commented out when the tapestry-release-version is a not a snapshot.
- The non-snapshot Tapestry artifacts are distributed through the central
- repository at ibiblio.     -->
+    <!--<repositories>-->
+        <!--&lt;!&ndash; This can be commented out when the tapestry-release-version is a not a snapshot.-->
+ <!--The non-snapshot Tapestry artifacts are distributed through the central-->
+ <!--repository at ibiblio.     &ndash;&gt;-->
 
-        <repository>
-            <id>tapestry-snapshots</id>
-            <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
-        </repository>
+        <!--<repository>-->
+            <!--<id>tapestry-snapshots</id>-->
+            <!--<url>http://tapestry.formos.com/maven-snapshot-repository/</url>-->
+        <!--</repository>-->
 
-        <repository>
-            <id>codehaus.snapshots</id>
-            <url>http://snapshots.repository.codehaus.org</url>
-        </repository>
-        <repository>
-            <id>OpenQA_Release</id>
-            <name>OpenQA Release Repository</name>
-            <url>http://archiva.openqa.org/repository/releases/</url>
-        </repository>
-        </repositories>
+        <!--<repository>-->
+            <!--<id>codehaus.snapshots</id>-->
+            <!--<url>http://snapshots.repository.codehaus.org</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<id>OpenQA_Release</id>-->
+            <!--<name>OpenQA Release Repository</name>-->
+            <!--<url>http://archiva.openqa.org/repository/releases/</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
 
-    <pluginRepositories>
+    <!--<pluginRepositories>-->
 
-        <!-- As above, this can be commented out when access to the snapshot version
-of a Tapestry Maven plugin is not required.   -->
-        <pluginRepository>
-            <id>tapestry-snapshots</id>
-            <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
-        </pluginRepository>
+        <!--&lt;!&ndash; As above, this can be commented out when access to the snapshot version-->
+<!--of a Tapestry Maven plugin is not required.   &ndash;&gt;-->
+        <!--<pluginRepository>-->
+            <!--<id>tapestry-snapshots</id>-->
+            <!--<url>http://tapestry.formos.com/maven-snapshot-repository/</url>-->
+        <!--</pluginRepository>-->
 
-    </pluginRepositories>
+    <!--</pluginRepositories>-->
 </project>
