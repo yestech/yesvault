@@ -44,7 +44,7 @@
         <system>hudson</system>
     </ciManagement>
     <properties>
-        <tapestry-release-version>5.0.18</tapestry-release-version>
+        <tapestry-release-version>5.8.2</tapestry-release-version>
         <slf4j.version>1.5.11</slf4j.version>
     </properties>
     <dependencies>
